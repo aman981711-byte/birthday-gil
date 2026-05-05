@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Antima 💕</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Password Gate -->
+  <div id="password-gate" class="password-gate">
+    <div class="gate-content">
+      <div class="lock-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>
+      <h1 class="gate-title">A Special Surprise Awaits</h1>
+      <p class="gate-subtitle">Enter the secret password to continue</p>
+      <div class="password-input-wrapper">
+        <input type="password" id="password-input" placeholder="Enter password..." autocomplete="off">
+        <button id="unlock-btn" class="unlock-btn">
+          <span>Unlock</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+      <p id="error-msg" class="error-msg"></p>
+      <div class="hint">💕 Hint: Something close to your heart</div>
+    </div>
+    <div class="floating-hearts" id="gate-hearts"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="main-content hidden">
+    <!-- Cinematic Effects Container -->
+    <div class="effects-container">
+      <div id="hearts-container" class="hearts-container"></div>
+      <div id="petals-container" class="petals-container"></div>
+      <div id="fireworks-container" class="fireworks-container"></div>
+      <div id="sparkles-container" class="sparkles-container"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <span class="logo-text">Antima</span>
+        <span class="logo-heart">♥</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#gallery" class="nav-link">Memories</a></li>
+        <li><a href="#timeline" class="nav-link">Our Story</a></li>
+        <li><a href="#wishes" class="nav-link">Wishes</a></li>
+        <li><a href="#chat" class="nav-link">Messages</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg">
+        <div class="gradient-overlay"></div>
+        <div class="particle-field" id="particle-field"></div>
+      </div>
+      <div class="hero-content">
+        <div class="birthday-badge">
+          <span class="badge-text">🎂 Birthday Special 🎂</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">Happy Birthday</span>
+          <span class="title-name">Antima</span>
+        </h1>
+        <p class="hero-subtitle">Today we celebrate the most amazing person in the world</p>
+        <div class="hero-cta">
+          <button class="cta-btn primary" id="start-journey">
+            <span>Begin Your Journey</span>
+            <div class="btn-glow"></div>
+          </button>
+          <button class="cta-btn secondary" id="play-music">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <span>Play Music</span>
+          </button>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <span>Scroll to explore</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Netflix Style) -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Precious Memories</h2>
+        <p class="section-subtitle">Every moment with you is a treasure</p>
+      </div>
+      
+      <!-- Featured Row -->
+      <div class="gallery-row">
+        <h3 class="row-title">✨ Featured Moments</h3>
+        <div class="gallery-slider" id="featured-slider">
+          <button class="slider-btn prev" data-slider="featured">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="slider-track">
+            <div class="gallery-card featured">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600)" alt="Memory 1">
+                <div class="card-overlay">
+                  <span class="play-icon">▶</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4>Our First Adventure</h4>
+                <p>The day everything changed</p>
+              </div>
+            </div>
+            <div class="gallery-card featured">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600)" alt="Memory 2">
+                <div class="card-overlay">
+                  <span class="play-icon">▶</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4>Sunset Together</h4>
+                <p>Golden hour memories</p>
+              </div>
+            </div>
+            <div class="gallery-card featured">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=600)" alt="Memory 3">
+                <div class="card-overlay">
+                  <span class="play-icon">▶</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4>Celebration Time</h4>
+                <p>Joy in every smile</p>
+              </div>
+            </div>
+            <div class="gallery-card featured">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600)" alt="Memory 4">
+                <div class="card-overlay">
+                  <span class="play-icon">▶</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4>Coffee Date</h4>
+                <p>Simple pleasures</p>
+              </div>
+            </div>
+            <div class="gallery-card featured">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600)" alt="Memory 5">
+                <div class="card-overlay">
+                  <span class="play-icon">▶</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h4>Your Beautiful Smile</h4>
+                <p>My favorite view</p>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn next" data-slider="featured">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Adventures Row -->
+      <div class="gallery-row">
+        <h3 class="row-title">🌟 Adventures Together</h3>
+        <div class="gallery-slider" id="adventures-slider">
+          <button class="slider-btn prev" data-slider="adventures">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="slider-track">
+            <div class="gallery-card">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400)" alt="Adventure 1">
+              </div>
+              <div class="card-info">
+                <h4>Mountain Escape</h4>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400)" alt="Adventure 2">
+              </div>
+              <div class="card-info">
+                <h4>Beach Days</h4>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400)" alt="Adventure 3">
+              </div>
+              <div class="card-info">
+                <h4>Road Trip</h4>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400)" alt="Adventure 4">
+              </div>
+              <div class="card-info">
+                <h4>Nature Walks</h4>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?w=400)" alt="Adventure 5">
+              </div>
+              <div class="card-info">
+                <h4>City Lights</h4>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="card-media">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400)" alt="Adventure 6">
+              </div>
+              <div class="card-info">
+                <h4>Romantic Paris</h4>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn next" data-slider="adventures">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Video Section -->
+      <div class="video-showcase">
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800)" alt="Video Thumbnail">
+            <div class="video-overlay">
+              <button class="video-play-btn" id="play-video">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+              <div class="video-info">
+                <span class="video-duration">3:45</span>
+                <h4>Our Love Story</h4>
+                <p>A compilation of our best moments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Beautiful Journey</h2>
+        <p class="section-subtitle">Every chapter of our story</p>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-icon">💕</div>
+            <div class="timeline-date">Day One</div>
+            <h3>When We Met</h3>
+            <p>The universe conspired to bring us together. From that first moment, I knew something magical was beginning.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-icon">☕</div>
+            <div class="timeline-date">First Date</div>
+            <h3>Coffee & Conversations</h3>
+            <p>Hours felt like minutes as we talked about everything and nothing. Your laugh became my favorite sound.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-icon">✈️</div>
+            <div class="timeline-date">Adventures</div>
+            <h3>Exploring Together</h3>
+            <p>Every journey with you is an adventure. From spontaneous trips to planned getaways, we make memories everywhere.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-icon">🌟</div>
+            <div class="timeline-date">Milestones</div>
+            <h3>Growing Together</h3>
+            <p>Through highs and lows, we've grown stronger. You're not just my partner, you're my best friend.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-icon">🎂</div>
+            <div class="timeline-date">Today</div>
+            <h3>Your Special Day</h3>
+            <p>Today we celebrate you—the most incredible person I know. Happy Birthday, my love!</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-icon">♾️</div>
+            <div class="timeline-date">Forever</div>
+            <h3>Our Future</h3>
+            <p>This is just the beginning. I can't wait for all the tomorrows we'll share together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section id="wishes" class="wishes-section">
+      <div class="wishes-bg">
+        <div class="wishes-gradient"></div>
+      </div>
+      <div class="wishes-content">
+        <div class="section-header light">
+          <h2 class="section-title">Birthday Wishes</h2>
+          <p class="section-subtitle">From my heart to yours</p>
+        </div>
+        <div class="wishes-grid">
+          <div class="wish-card">
+            <div class="wish-icon">🌹</div>
+            <h3>Health & Happiness</h3>
+            <p>May this year bring you endless joy, perfect health, and all the happiness your heart can hold.</p>
+          </div>
+          <div class="wish-card">
+            <div class="wish-icon">✨</div>
+            <h3>Dreams Come True</h3>
+            <p>May all your dreams unfold beautifully, and may you achieve everything you set your heart on.</p>
+          </div>
+          <div class="wish-card">
+            <div class="wish-icon">💖</div>
+            <h3>Love Always</h3>
+            <p>May you always feel loved, cherished, and appreciated—because you deserve nothing less.</p>
+          </div>
+          <div class="wish-card">
+            <div class="wish-icon">🎁</div>
+            <h3>Wonderful Surprises</h3>
+            <p>May life surprise you with beautiful moments and unexpected blessings at every turn.</p>
+          </div>
+        </div>
+        <div class="birthday-letter">
+          <div class="letter-envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body">
+              <span>Click to open</span>
+            </div>
+          </div>
+          <div class="letter-content" id="letter-content">
+            <div class="letter-paper">
+              <p class="letter-greeting">My Dearest Antima,</p>
+              <p>On this beautiful day, I want you to know just how special you are to me. Your smile lights up my world, your kindness inspires everyone around you, and your love makes every day worth living.</p>
+              <p>Thank you for being you—for your patience, your understanding, your incredible spirit. You make me want to be a better person every single day.</p>
+              <p>Here's to another year of adventures, laughter, dreams, and love. May this birthday be as wonderful as you are.</p>
+              <p class="letter-signature">Forever Yours,<br>With All My Love ❤️</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chat" class="chat-section">
+      <div class="section-header">
+        <h2 class="section-title">Birthday Messages</h2>
+        <p class="section-subtitle">Real-time love notes</p>
+      </div>
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="chat-avatar">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100)" alt="Avatar">
+            <span class="online-status"></span>
+          </div>
+          <div class="chat-info">
+            <h4>Birthday Girl 💕</h4>
+            <span class="chat-status">Online now</span>
+          </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+          <!-- Messages will be populated by JS -->
+        </div>
+        <div class="chat-input-area">
+          <button class="emoji-btn">😊</button>
+          <input type="text" id="chat-input" placeholder="Type a birthday message...">
+          <button class="send-btn" id="send-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-message">
+          <span class="footer-heart">❤️</span>
+          <p>Made with love for the most amazing person</p>
+        </div>
+        <div class="footer-cake">
+          <div class="cake">
+            <div class="candle">
+              <div class="flame"></div>
+            </div>
+            <div class="cake-top"></div>
+            <div class="cake-bottom"></div>
+          </div>
+        </div>
+        <p class="footer-text">Happy Birthday Antima • 2025</p>
+      </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">×</button>
+        <div class="modal-video">
+          <video id="modal-video" controls>
+            <source src="your-video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-overlay"></div>
+      <button class="lightbox-close">×</button>
+      <button class="lightbox-prev">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="lightbox-content">
+        <img src="" alt="Gallery Image" id="lightbox-img">
+      </div>
+      <button class="lightbox-next">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- Birthday Music (Hidden) -->
+    <audio id="birthday-music" loop>
+      <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
